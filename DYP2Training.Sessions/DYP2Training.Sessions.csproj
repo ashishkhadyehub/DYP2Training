@@ -69,9 +69,11 @@
   <ItemGroup>
     <Content Include="HtmlPage1.html" />
     <Content Include="Index.aspx" />
+    <Content Include="IspostBackExample.aspx" />
     <Content Include="JavaScript.js" />
     <Content Include="Register.aspx" />
     <Content Include="StyleSheet1.css" />
+    <Content Include="ViewStateExample.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +83,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IspostBackExample.aspx.cs">
+      <DependentUpon>IspostBackExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IspostBackExample.aspx.designer.cs">
+      <DependentUpon>IspostBackExample.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
@@ -96,6 +105,13 @@
     </Compile>
     <Compile Include="User.Master.designer.cs">
       <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStateExample.aspx.cs">
+      <DependentUpon>ViewStateExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStateExample.aspx.designer.cs">
+      <DependentUpon>ViewStateExample.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
