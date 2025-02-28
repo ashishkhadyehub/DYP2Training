@@ -11,12 +11,24 @@ namespace EMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["EmployeeId"]!=null)
+            {
+                lilogout.Visible = true;
+                lilogin.Visible = false;
+                liregister.Visible = false;
+            }
+            else
+            {
+                lilogout.Visible = false;
+                lilogin.Visible = true;
+                liregister.Visible = true;
+            }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-
+            Session.RemoveAll();
+            Response.Redirect("Index.aspx");
         }
     }
 }
