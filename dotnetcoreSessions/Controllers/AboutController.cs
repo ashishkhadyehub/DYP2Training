@@ -11,6 +11,7 @@ namespace dotnetcoreSessions.Controllers
 
         public IActionResult History()
         {
+
             return View();
         }
     }
