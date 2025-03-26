@@ -1,5 +1,6 @@
 ﻿using LA.Models;
 using LA.Respositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,8 @@ namespace LA.Respositories.Implementations
 
         public IEnumerable<District> GetAll()
         {
-            return _context.Districts.ToList();
+            return _context.Districts.Include(a=>a.State)
+                .ThenInclude(b=>b.Country).ToList();
         }
 
         public District GetById(int id)
